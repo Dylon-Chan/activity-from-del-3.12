@@ -1,5 +1,5 @@
 # CHANGE-TO-YOURNAME-aws-node-http-api-project
-service: wengsiong-aws-node-http-api-project #name of the service
+service: ws-aws-node-http-api-project #name of the service
 frameworkVersion: '3' #just the version of the framework
 
 provider: #configuration for the cloud provider

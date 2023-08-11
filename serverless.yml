@@ -1,19 +1,19 @@
 # CHANGE-TO-YOURNAME-aws-node-http-api-project
-service: wengsiong-aws-node-http-api-project
-frameworkVersion: '3'
+service: wengsiong-aws-node-http-api-project #name of the service
+frameworkVersion: '3' #just the version of the framework
 
-provider:
+provider: #configuration for the cloud provider
   name: aws
-  runtime: nodejs18.x
-  region: ap-southeast-1
+  runtime: nodejs18.x #runtime for the function we will use
+  region: ap-southeast-1 #region where we will deploy our service in aws
 
 functions:
-  api:
-    handler: index.handler
-    events:
-      - httpApi:
-          path: /
-          method: get
+  api: #name of the lambda function
+    handler: index.handler #name of the file and the name of the function
+    events: #events that will trigger the function
+      - httpApi: #type of event
+          path: / #path of the event
+          method: get #method of the event
 
-plugins:
-  - serverless-offline
+plugins: #plugins that we will use
+  - serverless-offline #plugin to run the service locally
